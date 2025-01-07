@@ -3,7 +3,7 @@ import "bootstrap";
 import "./style.css";
 
 function seleccionarElementoAleatorio(arr) {
-  const idx = Math.floor(Math.random() * arr.length);
+  let idx = Math.floor(Math.random() * arr.length);
   return arr[idx];
 }
 
@@ -19,13 +19,13 @@ window.onload = function() {
     "while I was praying"
   ];
 
-  const randomWho = seleccionarElementoAleatorio(who);
-  const randomAction = seleccionarElementoAleatorio(action);
-  const randomWhat = seleccionarElementoAleatorio(what);
-  const randomWhen = seleccionarElementoAleatorio(when);
+  let randomWho = seleccionarElementoAleatorio(who);
+  let randomAction = seleccionarElementoAleatorio(action);
+  let randomWhat = seleccionarElementoAleatorio(what);
+  let randomWhen = seleccionarElementoAleatorio(when);
 
-  const randomExcuse = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}`;
+  let randomExcuse = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}`;
 
-  const excuseElement = document.querySelector("#excuse");
+  let excuseElement = document.querySelector("#excuse");
   excuseElement.innerHTML = randomExcuse;
 };
